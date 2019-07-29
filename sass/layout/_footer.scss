@@ -1,0 +1,126 @@
+.footer-container {
+    background-color: $grey;
+}
+
+.footer-navbar {
+    max-width: 990px !important;
+}
+
+.myNavLink {
+    font-weight: 400 !important;
+    font-size: 1.125rem !important;
+    line-height: 25px !important;
+    color: $white !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+}
+
+.myLinkAbout {
+    font-style: normal !important;
+    font-weight: 100 !important;
+    font-size: 1.125rem !important;
+    line-height: 25px !important;
+    color: $white !important;
+}
+
+.newNavLink {
+    font-size: 1.125rem !important;
+    line-height: 25px !important;
+    color: $white !important;
+}
+
+.footerTxt {
+    font-size: 0.875rem !important;
+    line-height: 19px !important;
+    color: $white !important;
+}
+
+.footer-title {
+    text-align: center !important;
+    text-transform: uppercase !important;
+    margin-bottom: 10px !important;
+}
+
+.delivery-txt:not(:last-child) {
+    margin-bottom: 14px !important;
+}
+
+.pay-txt:not(:last-child) {
+    margin-bottom: 14px !important;
+}
+
+
+.footer-adress {
+    font-size: 0.75rem;
+    line-height: 19px;
+    color: $white;
+
+    &__txt {
+        font-size: 1.1rem;
+        line-height: 16px;
+    }
+}
+
+.footer-phone {
+    font-size: 1 rem;
+    line-height: 33px;
+    letter-spacing: 0.09em;
+    color: $white;
+}
+
+.social-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 769px) {
+    .footer-navbar {
+        display: none !important;
+    }
+
+    .footer-info {
+
+        &__delivery {
+            margin-top: 20px;
+        }
+
+        &__pay {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .footer-info{
+        
+        &__number{
+            align-items: center;
+        }
+
+        &__about{
+            display: none !important;
+        }
+
+        &__delivery{
+            display: none !important;
+        }
+
+        &__pay{
+            display: none !important;
+        }
+    }
+
+    .footer-adress{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .social-mobile{
+        margin-top: 20px;
+        @include dflex(space-around, unset);
+    }
+
+    .social__link-mobile:not(:last-child){
+        margin-right: 20px;
+    }
+}
