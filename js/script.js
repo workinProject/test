@@ -26,9 +26,6 @@ $('.slider-forN').slick({
     {
       breakpoint: 425,
       settings: {
-        arrows: true,
-    prevArrow: $(".prevProd"),
-    nextArrow: $(".nextProd"),
       }
     }
   ]
@@ -45,9 +42,9 @@ $('.slider-navN').slick({
       breakpoint: 769,
       settings: {
         vertical:false,
-        centerMode: true,
         }
     }
+    
   ]
 });
 /*------------------------*/
@@ -78,6 +75,7 @@ $(function() {
 
   $(window).scroll(function(){
     $('#fix-top').toggleClass('fixed-top', $(this).scrollTop() > 0);
+    //$('.header-container').toggleClass('displayNone', $(this).scrollTop() > 0);
   
     if($(window).width() < 769){
       $('#top-header__basket').toggleClass('fixed-top__basket', $(this).scrollTop() > 0);
@@ -108,7 +106,7 @@ $(function() {
   });
   
   
-$('.your-class').slick({
+$('.slick-reviews').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,

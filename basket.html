@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--SLICK-->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!---->
+    <title>basket</title>
+</head>
+
+<body>
+    <!--СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ-->
+    <div class="special-offer text-white d-flex py-2">
+        <a href="#" class="special-offer__txt">
+            специальное предложение для корпоративных клиектов
+        </a>
+        <span class="special-offer__close" id="close"> &#215; </span>
+    </div>
+
+    <!--ХЕАДЕР-->
+    <header>
+        <div id="headerTop"></div>
+        <div id="headerBottom"></div>
+    </header>
+    <!---->
+
+    <main class="container">
+
+        <div class="title-default">
+            Моя корзина
+        </div>
+
+        <div class="basket-container">
+            <div class="basket__title">
+                Товары в корзине
+            </div>
+
+            <table id="basket_items" class="basket-table">
+                <thead class="table-header">
+                    <tr>
+                        <td class="item">Товары</td>
+                        <td></td>
+                        <td class="price">Цена</td>
+                        <td class="custom">Количество</td>
+                        <td class="total">Сумма</td>
+                        <td></td>
+                    </tr>
+                </thead>
+
+                <tbody class="tableBody">
+                    <tr class="table-box">
+                        <td class="itemphoto">
+                            <a href="#">
+                                <img src="img/image-basket.png" alt="">
+                            </a>
+                        </td>
+                        <td class="itemTxt">
+                            101 роза
+                        </td>
+                        <td class="itemPrice">
+                            2999р.
+                        </td>
+                        <td class="itemCustom">
+                            <div class="quantity">
+                                <img src="img/back.png" class="quantity-arrow-minus basket-quantity" alt="">
+                                <form action="">
+                                    <input class="quantity-num basketQuantity-num" type="number" value="1" />
+                                </form>
+                                <img src="img/next.png" class="quantity-arrow-plus basket-quantity" alt="">
+                            </div>
+                        </td>
+                        <td class="itemTotal">
+                            2999р.
+                        </td>
+                        <td class="delete">
+                            <img src="img/del-basket.png" alt="">
+                        </td>
+                    </tr>
+
+                    <tr class="table-box">
+                        <td class="itemphoto">
+                            <a href="#">
+                                <img src="img/image-basket.png" alt="">
+                            </a>
+                        </td>
+                        <td class="itemTxt">
+                            101 роза
+                        </td>
+                        <td class="itemPrice">
+                            2999р.
+                        </td>
+                        <td class="itemCustom">
+                            <div class="quantity">
+                                <img src="img/back.png" class="quantity-arrow-minus basket-quantity" alt="">
+                                <form action="">
+                                    <input class="quantity-num basketQuantity-num" type="number" value="1" />
+                                </form>
+                                <img src="img/next.png" class="quantity-arrow-plus basket-quantity" alt="">
+                            </div>
+                        </td>
+                        <td class="itemTotal">
+                            2999р.
+                        </td>
+                        <td class="itemDelete">
+                            <img src="img/del-basket.png" alt="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="basket-additive container">
+            <div class="additive">
+                <img src="img/fl.png" alt="" class="additive__icon">
+                <label class="custom-check">
+                    <input type='checkbox'>
+                    <span class="additive__check"></span>
+                    <p class="additive__txt">добавить открытку (бесплатно)</p>
+                </label>
+            </div>
+
+            <div class="additive">
+                <img src="img/inst.png" alt="" class="additive__icon">
+                <label class="custom-check">
+                    <input type='checkbox'>
+                    <span class="additive__check"></span>
+                    <p class="additive__txt">сделать фото при получении</p>
+                </label>
+
+            </div>
+        </div>
+
+        <div class="totalPrice">
+            <h2 class="totalPrice__txt">Всего товаров на сумму:</h2>
+            <h2 class="totalPrice__sum">10800р.</h2>
+        </div>
+
+        <div class="basket-delivery">
+            <div class="basket-delivery__title">
+                Доставка
+            </div>
+            <div class="basket-delivery__box">
+                <label class="delivery-item">
+                    <input type="radio" class="delivery-item__radio" name="dellivery">
+                    <p class="delivery-item__txt"> Не требуется (самовывоз)</p>
+                </label>
+                <label class="delivery-item">
+                    <input type="radio" class="delivery-item__radio" name="dellivery">
+                    <p class="delivery-item__txt"> Город - 250 р</p>
+                </label>
+                <label class="delivery-item">
+                    <input type="radio" class="delivery-item__radio" name="dellivery">
+                    <p class="delivery-item__txt"> Ростоши, Южный, Авиагородок, Кушкуль - 350 р.</p>
+                </label>
+                <label class="delivery-item">
+                    <input type="radio" class="delivery-item__radio" name="dellivery">
+                    <p class="delivery-item__txt"> Юж.Урал, 9 Января, Ивановка, Пригородны - 400 р.</p>
+                </label>
+                <label class="delivery-item">
+                    <input type="radio" class="delivery-item__radio" name="dellivery">
+                    <p class="delivery-item__txt">Нежинка, Экодолье, х. Степановский, п. Ленина - 450 </p>
+                </label>
+                <label class="delivery-item">
+                    <input type="radio" class="delivery-item__radio" name="dellivery">
+                    <p class="delivery-item__txt">Аэропорт, Благословенка, П. Покровка - 550 р.</p>
+                </label>
+            </div>
+        </div>
+
+        <div class="totalPrice">
+            <h2 class="totalPrice__txt">Общая стоимость заказа:</h2>
+            <h2 class="totalPrice__sum">10800р.</h2>
+        </div>
+
+        <div class="title-default">
+            Рекомендуем
+        </div>
+
+
+        <div class="row container cardContainer ">
+            <div class="myCards col-xs-12 col-sm-6 col-md-6 col-lg-4 p-1 d-flex flex-column align-items-center mb-4">
+                <div class="myContainer border">
+                    <a href="product.html" class="myCards__body d-flex flex-column align-items-center mt-3 ">
+                        <img src="img/flowerB.png" class="img-fluid imgW" alt="">
+                        <div class="flowers-name flowers-txt mt-2">101Роза</div>
+                        <div class="flowers-price flowers-txt my-2">2999 &#8381;</div>
+                    </a>
+
+                    <div class="myCards__btn d-flex flex-column align-items-center">
+                        <button type="button" class="myBtn">Закачать</button>
+                        <a href="#" class="myLink mb-2">Купить в 1 клик</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myCards col-xs-12 col-sm-6 col-md-6 col-lg-4 p-1 d-flex flex-column align-items-center mb-4">
+                <div class="myContainer border">
+                    <a href="product.html" class="myCards__body d-flex flex-column align-items-center mt-3 ">
+                        <img src="img/flowerB.png" class="img-fluid imgW" alt="">
+                        <div class="flowers-name flowers-txt mt-2">101Роза</div>
+                        <div class="flowers-price flowers-txt my-2">2999 &#8381;</div>
+                    </a>
+
+                    <div class="myCards__btn d-flex flex-column align-items-center">
+                        <button type="button" class="myBtn">Закачать</button>
+                        <a href="#" class="myLink mb-2">Купить в 1 клик</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myCards col-xs-12 col-sm-6 col-md-6 col-lg-4 p-1 d-flex flex-column align-items-center mb-4">
+                <div class="myContainer border">
+                    <a href="product.html" class="myCards__body d-flex flex-column align-items-center mt-3 ">
+                        <img src="img/flowerB.png" class="img-fluid imgW" alt="">
+                        <div class="flowers-name flowers-txt mt-2">101Роза</div>
+                        <div class="flowers-price flowers-txt my-2">2999 &#8381;</div>
+                    </a>
+
+                    <div class="myCards__btn d-flex flex-column align-items-center">
+                        <button type="button" class="myBtn">Закачать</button>
+                        <a href="#" class="myLink mb-2">Купить в 1 клик</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--ФУТЕР-->
+    <div id="footer"></div>
+    <!---->
+
+    <!--JQUERY-->
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <!--BOOTSTRAP-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--SLICK-->
+    <script src="slick/slick.min.js"></script>
+    <!--TEMPLATE-->
+    <script src="js/template.js"></script>
+    <!--MY SCRIPT-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

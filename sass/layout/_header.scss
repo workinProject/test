@@ -131,7 +131,7 @@
 
 .fixed-top__basket {
     position: fixed;
-    top: 20px;
+    top: 16px;
     right: 10px;
     z-index: 10000;
 }
@@ -173,7 +173,7 @@ button:focus {
 }
 
 @media screen and (max-width:1025px) {
-    .top-header {
+   /* .top-header {
 
         &__chooseTown {
             display: flex !important;
@@ -182,17 +182,17 @@ button:focus {
         }
 
         &__delivery {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
         }
 
         &__number {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
         }
-    }
+    }*/
 }
 
 @media screen and (max-width: 769px) {
@@ -226,7 +226,7 @@ button:focus {
 
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 576px) {
 
     .nav-info {
         @include dflex(space-between, center);

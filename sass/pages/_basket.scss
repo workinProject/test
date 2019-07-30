@@ -1,0 +1,218 @@
+.basket-table {
+    width: 100%;
+}
+
+.table-header {
+    background-color: $lightGrey;
+    width: 100%;
+    text-align: left;
+}
+
+.itemphoto {
+    width: 170px;
+    padding: 15px;
+}
+
+.table-header td {
+    padding-left: 15px;
+}
+
+.itemphoto img {
+    width: 100%;
+    height: auto;
+}
+
+.itemTxt {
+    padding: 15px;
+}
+
+.itemPrice {
+    width: 120px;
+    padding: 15px;
+}
+
+.itemCustom {
+    width: 120px;
+    padding: 15px;
+}
+
+.itemTotal {
+    width: 140px;
+    padding: 15px;
+}
+
+.itemDelete {
+    text-align: center;
+    width: 54px;
+    padding: 15px;
+}
+
+.tableBody {
+    text-align: left;
+    vertical-align: top;
+}
+
+.table-box {
+    border-bottom: 1px solid $black;
+    margin: 15px;
+}
+
+.basket-quantity {
+    width: 12px;
+}
+
+.basketQuantity-num {
+    width: 65px !important;
+    height: 23px;
+}
+
+.basket-additive {
+    @include dflex(space-around, unset);
+    margin: 25px 0px;
+}
+
+.additive {
+    @include dflex(unset, center);
+
+    &__icon {
+        width: 27px;
+        margin-right: 10px;
+    }
+
+    &__check {
+        margin-right: 10px;
+    }
+
+    &__txt {
+        font-size: 0.875rem;
+        line-height: 19px;
+        color: $black;
+
+    }
+}
+
+.custom-check {
+    @include dflex(unset, unset);
+    margin-bottom: 0;
+}
+
+.custom-check input {
+    display: none;
+}
+
+.additive__check {
+    height: 17px;
+    width: 17px;
+    border: 1px solid gray;
+    display: inline-block;
+    position: relative;
+    background-color: #FFF;
+}
+
+[type=checkbox]:checked+.additive__check:before {
+    content: '\2714';
+    position: absolute;
+    top: -7px;
+    left: 0;
+    font-size: 20px;
+    color: green;
+}
+
+.totalPrice {
+    @include dflex(flex-end, center);
+
+    &__txt {
+        font-size: 1.5rem;
+        line-height: 33px;
+        color: $grey;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    &__sum {
+        font-size: 1.5rem;
+        line-height: 33px;
+        color: $grey;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+
+}
+
+.basket-delivery{
+
+    &__title{
+       font-size: 24px;
+        line-height: 33px;
+        color: $grey;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+.delivery-item{
+    margin-left: 20px;
+    @include dflex(unset, center);
+
+    &__radio{
+        margin-right: 10px;
+    }
+
+    &__txt{
+
+    }
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + .delivery-item__txt,
+[type="radio"]:not(:checked) + .delivery-item__txt
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+[type="radio"]:checked + .delivery-item__txt:before,
+[type="radio"]:not(:checked) + .delivery-item__txt:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $black;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + .delivery-item__txt:after,
+[type="radio"]:not(:checked) + .delivery-item__txt:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: $green;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + .delivery-item__txt:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + .delivery-item__txt:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
