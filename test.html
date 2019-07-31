@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--LODASH-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <!--SLICK-->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!---->
+
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .myblock {
+            height: 100px;
+            background-color: tomato;
+        }
+
+        .otherBlock {
+            background-color: grey;
+            height: 400px;
+        }
+
+        .myFixed-top {
+            position: fixed;
+            right: 0px;
+            left: 0px;
+            z-index: 1030;
+            animation-iteration-count: 2, 0, infinite;
+        }
+
+       
+        @keyframes change-background {
+            0%{
+                top: 400px
+            }
+
+            100% {
+                top:0px;
+            }
+        }
+    </style>
+
+    <title>Home</title>
+</head>
+
+<body>
+
+
+    <div class="otherBlock">
+
+    </div>
+
+
+    <div class="myblock" id="fix-top">
+        хеадер
+    </div>
+
+
+    <!--JQUERY-->
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+
+
+    <script>
+        $(window).scroll(function () {
+            $('#fix-top').toggleClass('myFixed-top', $(this).scrollTop() > 0).fade(1000);
+        })
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <!--BOOTSTRAP-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--SLICK-->
+    <script src="slick/slick.min.js"></script>
+    <!--TEMPLATE-->
+    <script src="js/template.js"></script>
+    <!--OBJECT-->
+    <script src="js/object.js"></script>
+    <!--MY SCRIPT-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -74,7 +74,7 @@ $(function() {
 /*---------------------------------------------------------------------------*/
 
   $(window).scroll(function(){
-    $('#fix-top').toggleClass('fixed-top', $(this).scrollTop() > 0);
+    $('#headerBottom').toggleClass('myFix', $(this).scrollTop() > 0);
     //$('.header-container').toggleClass('displayNone', $(this).scrollTop() > 0);
   
     if($(window).width() < 769){
@@ -93,6 +93,7 @@ $(function() {
 
   })
 
+  /* Крест в хедере */
   $( document ).ready(function(){
 	  $( ".mobile-burger" ).click(function(){ 
       $( ".mobile-burger" ).css('display', 'none'); 
@@ -104,8 +105,9 @@ $(function() {
       $( ".mobile-burger" ).css('display', 'block'); 
 	  });
   });
-  
-  
+  /*-------------------------- */
+
+  /*Сдлайдер отзывов*/
 $('.slick-reviews').slick({
   infinite: true,
   slidesToShow: 3,
@@ -127,3 +129,4 @@ $('.slick-reviews').slick({
     }
   ]
 });
+/*---------------------*/

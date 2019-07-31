@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--SLICK-->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!---->
+    <title>checkout</title>
+</head>
+
+<body>
+    <!--СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ-->
+    <div class="special-offer text-white d-flex py-2">
+        <a href="#" class="special-offer__txt">
+            специальное предложение для корпоративных клиектов
+        </a>
+        <span class="special-offer__close" id="close"> &#215; </span>
+    </div>
+
+    <!--ХЕАДЕР-->
+    <header>
+        <div id="headerTop"></div>
+        <div id="headerBottom"></div>
+    </header>
+    <!---->
+
+    <main class="container">
+
+        <div class="title-default basket-head">
+            Моя корзина
+        </div>
+
+        <div class="basket-container">
+            <div class="basket__title">
+                Товары в корзине
+            </div>
+
+            <table id="basket_items" class="basket-table">
+                <thead class="table-header">
+                    <tr>
+                        <td class="item">Товары</td>
+                        <td></td>
+                        <td class="price">Цена</td>
+                        <td class="custom">Количество</td>
+                        <td class="total">Сумма</td>
+                        <td></td>
+                    </tr>
+                </thead>
+
+                <tbody class="tableBody">
+                    <tr class="table-box">
+                        <td class="itemphoto">
+                            <a href="#">
+                                <img src="img/image-basket.png" alt="">
+                            </a>
+                        </td>
+                        <td class="itemTxt">
+                            101 роза
+                        </td>
+                        <td class="itemPrice">
+                            2999р.
+                        </td>
+                        <td class="itemCustom">
+                            <div class="quantity">
+                                <img src="img/back.png" class="quantity-arrow-minus basket-quantity" alt="">
+                                <form action="">
+                                    <input class="quantity-num basketQuantity-num" type="number" value="1" />
+                                </form>
+                                <img src="img/next.png" class="quantity-arrow-plus basket-quantity" alt="">
+                            </div>
+                        </td>
+                        <td class="itemTotal">
+                            2999р.
+                        </td>
+                        <td class="itemDelete">
+                        </td>
+                    </tr>
+
+                    <tr class="table-box">
+                        <td class="itemphoto">
+                            <a href="#">
+                                <img src="img/image-basket.png" alt="">
+                            </a>
+                        </td>
+                        <td class="itemTxt">
+                            101 роза
+                        </td>
+                        <td class="itemPrice">
+                            2999р.
+                        </td>
+                        <td class="itemCustom">
+                            <div class="quantity">
+                                <img src="img/back.png" class="quantity-arrow-minus basket-quantity" alt="">
+                                <form action="">
+                                    <input class="quantity-num basketQuantity-num" type="number" value="1" />
+                                </form>
+                                <img src="img/next.png" class="quantity-arrow-plus basket-quantity" alt="">
+                            </div>
+                        </td>
+                        <td class="itemTotal">
+                            2999р.
+                        </td>
+                        <td class="itemDelete">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="checkout-delivery container">
+            <span class="checkout-delivery__txt">Доставка</span>
+
+            <span class="checkout-delivery__total">250p</span>
+        </div>
+
+        <div class="totalPrice">
+            <h2 class="totalPrice__txt">Общая стоимость заказа:</h2>
+            <h2 class="totalPrice__sum">10800р.</h2>
+        </div>
+
+        <form action="" class="checkout">
+
+            <div class="customer-info">
+                <div class="customer-info__title">
+                    Данные покуптеля
+                </div>
+
+                <div class="customer-info__box">
+
+                    <input type="text" class="customer-info__box--input" placeholder="Имя">
+                    <input type="text" class="customer-info__box--input" placeholder="Номер телефона">
+
+                </div>
+            </div>
+
+            <div class="recipient-info">
+                <div class="recipient-info__title">
+                    Данные получателя
+                </div>
+
+                <div class="recipient-info__box">
+                    <input type="text" class="recipient-info__box--input" placeholder="Имя">
+                    <input type="text" class="recipient-info__box--input" placeholder="Номер телефона">
+                </div>
+
+                <input type="text" class="form-adress" placeholder="Адресс доставки">
+                <textarea class="form-commit" placeholder="Комментарий к заказу"></textarea>
+            </div>
+
+        </form>
+
+        <div class="checkout-info">
+            <div class="checkout-info__pay">
+                <div class="checkout-info__pay--title">
+                    Оплата
+                </div>
+
+                <div class="checkout-info__pay--chechbox">
+                    <label class="delivery-item">
+                        <input type="radio" class="delivery-item__radio" name="pay">
+                        <p class="delivery-item__txt">Наличными при самовывозе</p>
+                    </label>
+                    <label class="delivery-item">
+                        <input type="radio" class="delivery-item__radio" name="pay">
+                        <p class="delivery-item__txt">Наличными при получении</p>
+                    </label>
+                    <label class="delivery-item">
+                        <input type="radio" class="delivery-item__radio" name="pay">
+                        <p class="delivery-item__txt">Банковской картой</p>
+                    </label>
+                </div>
+            </div>
+
+            <div class="checkout-info__promo">
+                <div class="checkout-info__promo--title">
+                    Введите UDS-код
+                </div>
+
+                <div class="checkout-info__promo--input">
+                    <input type="text" placeholder="Код" class="promocode">
+                    <a href="#" class="get-promo">получить код</a>
+                    <img src="img/question.png" alt="" class="icon-question">
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout__total">
+            <div class="checkout__ total--txt">
+                Итого к оплате:
+            </div>
+
+            <div class="checkout__total--number">
+                10800p
+            </div>
+        </div>
+
+        <div class="issueBtn-container checkout-btn-container mb-3">
+            <a href="#" class="issue-btn ml-auto checkout-btn">
+                оформить заказ
+            </a>
+        </div>
+
+
+
+
+    </main>
+
+    <!--ФУТЕР-->
+    <div id="footer"></div>
+    <!---->
+
+    <!--JQUERY-->
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <!--BOOTSTRAP-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--SLICK-->
+    <script src="slick/slick.min.js"></script>
+    <!--TEMPLATE-->
+    <script src="js/template.js"></script>
+    <!--MY SCRIPT-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

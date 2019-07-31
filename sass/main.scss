@@ -7,8 +7,9 @@
 @import 'layout/footer';    //футер
 @import 'layout/header';    //хеадер
 
-@import 'pages/home'; //главная страниа
-@import 'pages/product';       //страница блог
-@import 'pages/catalog';   //страница отзывов
+@import 'pages/home';       //главная страниа
+@import 'pages/product';    //страница товара
+@import 'pages/catalog';    //страница саталога
 
-@import 'pages/basket';   //страница отзывов
+@import 'pages/basket';     //страница корзины
+@import 'pages/checkout';   //страница оформления заказа

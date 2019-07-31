@@ -1,0 +1,167 @@
+.checkout-delivery {
+    @include dflex(space-between, center);
+    border-bottom: 1px solid $black;
+    padding: 15px;
+
+    &__txt {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 33px;
+        color: $grey;
+    }
+
+    &__total {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 27px;
+        color: $grey;
+        margin-right: 120px;
+    }
+}
+
+.customer-info {
+    margin-bottom: 30px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 33px;
+        color: $grey;
+        margin-bottom: 5px;
+    }
+
+    &__box {
+        @include dflex(space-between, unset);
+
+        &--input {
+            width: 45%;
+        }
+
+        &--input {
+            width: 45%;
+        }
+    }
+}
+
+.recipient-info {
+    margin-bottom: 30px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 33px;
+        color: $grey;
+        margin-bottom: 5px;
+    }
+
+    &__box {
+        @include dflex(space-between, unset);
+        margin-bottom: 15px;
+
+        &--input {
+            width: 45%;
+        }
+
+        &--input {
+            width: 45%;
+        }
+    }
+}
+
+.checkout input,
+textarea {
+    border: 1px solid $grey;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+.checkout textarea {
+    height: 45px;
+}
+
+.form-adress {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-commit {
+    width: 100%;
+}
+
+.checkout-info {
+    @include dflex(flex-end, unset);
+
+    &__pay {
+        margin-right: 30px;
+
+        &--title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 33px;
+            color: $grey;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__promo {
+
+        &--title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 33px;
+            color: $grey;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.get-promo {
+    color: $red;
+    border: 1px solid $red;
+    padding: 6px 20px;
+    font-size: 1rem;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $black;
+        background-color: $red;
+    }
+}
+
+.icon-question {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+}
+
+.promocode {
+    margin-left: 20px;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+.get-promo {
+    margin-left: 15px;
+}
+
+.checkout__total {
+    @include dflex(flex-end, unset);
+    font-size: 1.25rem;
+    line-height: 33px;
+    color: $grey;
+}
+
+.checkout-btn {
+    width: 300px;
+    font-size: 1.2rem;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    height: 40px;
+}

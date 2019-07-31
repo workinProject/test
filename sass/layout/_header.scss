@@ -129,13 +129,6 @@
     display: none !important;
 }
 
-.fixed-top__basket {
-    position: fixed;
-    top: 16px;
-    right: 10px;
-    z-index: 10000;
-}
-
 .second-navbar,
 .dropdown-divider {
     display: none !important;
@@ -171,6 +164,24 @@
 button:focus {
     outline: none;
 }
+
+.myFix{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1030;
+    transition: 2s;
+}
+
+.fixed-top__basket {
+    position: fixed;
+    top: 16px;
+    right: 10px;
+    z-index: 10000;
+    //transition: all 2s linear;
+}
+
 
 @media screen and (max-width:1025px) {
    /* .top-header {

@@ -2,6 +2,14 @@
     width: 100%;
 }
 
+.basket__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 33px;
+    color: $grey;
+    margin-bottom: 10px;
+}
+
 .table-header {
     background-color: $lightGrey;
     width: 100%;
@@ -15,6 +23,14 @@
 
 .table-header td {
     padding-left: 15px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 25px;
+    color: $grey;
+}
+
+.basket-head{
+    text-align: left;
 }
 
 .itemphoto img {
@@ -62,13 +78,14 @@
 }
 
 .basketQuantity-num {
-    width: 65px !important;
+    width: 55px !important;
     height: 23px;
+    border: 1px solid $black;
 }
 
 .basket-additive {
     @include dflex(space-around, unset);
-    margin: 25px 0px;
+    margin-top: 25px;
 }
 
 .additive {
@@ -120,6 +137,7 @@
 
 .totalPrice {
     @include dflex(flex-end, center);
+    margin-top: 25px;
 
     &__txt {
         font-size: 1.5rem;
@@ -139,32 +157,32 @@
 
 }
 
-.basket-delivery{
+.basket-delivery {
+    border-bottom: 1px solid $black;
 
-    &__title{
-       font-size: 24px;
+    &__title {
+        font-size: 24px;
         line-height: 33px;
         color: $grey;
+        margin-bottom: 15px;
     }
 
-    &__box{
+    &__box {
         display: flex;
         flex-direction: column;
 
     }
 }
 
-.delivery-item{
+.delivery-item {
     margin-left: 20px;
     @include dflex(unset, center);
 
-    &__radio{
+    &__radio {
         margin-right: 10px;
     }
 
-    &__txt{
-
-    }
+    //&__txt {}
 }
 
 [type="radio"]:checked,
@@ -172,17 +190,18 @@
     position: absolute;
     left: -9999px;
 }
-[type="radio"]:checked + .delivery-item__txt,
-[type="radio"]:not(:checked) + .delivery-item__txt
-{
+
+[type="radio"]:checked+.delivery-item__txt,
+[type="radio"]:not(:checked)+.delivery-item__txt {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
 }
-[type="radio"]:checked + .delivery-item__txt:before,
-[type="radio"]:not(:checked) + .delivery-item__txt:before {
+
+[type="radio"]:checked+.delivery-item__txt:before,
+[type="radio"]:not(:checked)+.delivery-item__txt:before {
     content: '';
     position: absolute;
     left: 0;
@@ -193,8 +212,9 @@
     border-radius: 100%;
     background: #fff;
 }
-[type="radio"]:checked + .delivery-item__txt:after,
-[type="radio"]:not(:checked) + .delivery-item__txt:after {
+
+[type="radio"]:checked+.delivery-item__txt:after,
+[type="radio"]:not(:checked)+.delivery-item__txt:after {
     content: '';
     width: 12px;
     height: 12px;
@@ -206,13 +226,35 @@
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-[type="radio"]:not(:checked) + .delivery-item__txt:after {
+
+[type="radio"]:not(:checked)+.delivery-item__txt:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
-[type="radio"]:checked + .delivery-item__txt:after {
+
+[type="radio"]:checked+.delivery-item__txt:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+.issueBtn-container {
+    @include dflex (flex-end, unset);
+    margin-top: 20px;
+}
+
+.issue-btn {
+    width: 250px;
+    @extend %btn;
+    color: $white;
+    background-color: $red;
+    margin: 0;
+    @include dflex (center, center);
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+
 }
